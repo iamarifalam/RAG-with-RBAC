@@ -1,0 +1,32 @@
+title: "Atlas: Enterprise Knowledge Assistant"
+description: "Production-ready RAG system with Role-Based Access Control for secure enterprise knowledge management"
+url: "https://iamarifalam.github.io"
+baseurl: "/RAG-with-RBAC"
+repository: iamarifalam/RAG-with-RBAC
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Custom variables
+author: "Arif Alam"
+email: "your-email@example.com"
+github_username: iamarifalam
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# Include files
+include:
+  - _pages
