@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ app_name }}</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="hero">
+        <p class="eyebrow">Enterprise Knowledge Assistant</p>
+        <h1>{{ app_name }}</h1>
+        <p class="lede">
+          Navigate your organization's collective knowledge with security-first RAG. Role-aware access, guardrails, audit logs, and production-grade monitoring.
+        </p>
+      </section>
+
+      <section class="card auth-card">
+        <div>
+          <h2>Sign In</h2>
+          <p>Authenticate to access knowledge bases matching your role.</p>
+        </div>
+        <div class="demo-grid">
+          {% for user in demo_users %}
+          <button
+            class="demo-user"
+            data-username="{{ user.username }}"
+            data-password="{{ user.password }}"
+          >
+            <strong>{{ user.username }}</strong>
+            <span>{{ user.role }}</span>
+          </button>
+          {% endfor %}
+        </div>
+        <form id="login-form">
+          <label>
+            Username
+            <input id="username" name="username" autocomplete="username" />
+          </label>
+          <label>
+            Password
+            <input id="password" name="password" type="password" autocomplete="current-password" />
+          </label>
+          <button type="submit">Sign In</button>
+        </form>
+        <p id="auth-status" class="muted"></p>
+      </section>
+
+      <section class="card chat-card">
+        <div class="chat-header">
+          <div>
+            <h2>Search Knowledge Base</h2>
+            <p>Query company policies, budgets, procedures, and guidelines. Results are filtered by your role.</p>
+          </div>
+          <button id="reindex-button" class="secondary">Reindex (executive only)</button>
+        </div>
+        <form id="chat-form">
+          <textarea id="question" rows="5" placeholder="Example: What changed in the Q3 budget approval policy?"></textarea>
+          <button type="submit">Send Question</button>
+        </form>
+        <div id="response-panel" class="response-panel hidden">
+          <h3>Response</h3>
+          <pre id="answer"></pre>
+          <p id="reason" class="reason"></p>
+          <div>
+            <h4>Sources</h4>
+            <ul id="sources"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+
