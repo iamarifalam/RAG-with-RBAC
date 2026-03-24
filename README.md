@@ -1,4 +1,4 @@
-# 🚀 Atlas: Enterprise Knowledge Assistant
+# RAG Enterprise Knowledge Assistant
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
@@ -32,7 +32,7 @@ Traditional RAG systems generate answers then filter them. **Atlas is different*
 └─────────────────┘    └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone and setup
@@ -51,7 +51,7 @@ docker-compose up -d
 
 Visit `http://localhost:8002` and login with demo credentials.
 
-## 🎯 Key Features
+## Key Features
 
 ### 🔐 Security First
 - **Role-based access control** at retrieval layer (not output filtering)
@@ -59,13 +59,13 @@ Visit `http://localhost:8002` and login with demo credentials.
 - **Guardrails** prevent hallucinations and information leaks
 - **Audit trails** for compliance and investigations
 
-### ⚡ Performance
+### Performance
 - **Sub-second responses** with optimized BM25 search
 - **Async processing** with FastAPI
 - **Scalable architecture** ready for Kubernetes
 - **Health monitoring** with Prometheus metrics
 
-### 🛠️ Enterprise Ready
+### Enterprise Ready
 - **Docker containerization** for easy deployment
 - **Structured logging** for ELK stack integration
 - **Environment-based config** (dev/staging/prod)
@@ -154,7 +154,7 @@ MIN_RETRIEVAL_SCORE=0.08
 ALLOWED_TOPICS=["finance", "hr", "marketing", "policy", "security"]
 ```
 
-## 🧪 Development
+## Development
 
 ```bash
 # Install dev dependencies
